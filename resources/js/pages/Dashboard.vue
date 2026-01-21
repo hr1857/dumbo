@@ -25,7 +25,7 @@ const breadcrumbs: BreadcrumbItem[] = [
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"
                 >
                     <PlaceholderPattern />
-                    ja wos is den des da des is jo des dashboard!
+                    Hier ist das Original-Dashboard
                 </div>
                 <div
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"

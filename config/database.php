@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'mariadb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,6 +70,66 @@ return [
             'database' => env('DB_DATABASE', 'laravel'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'wallneralt' => [
+            'driver' => 'mariadb',
+            'url' => env('DB_URL_WA'),
+            'host' => env('DB_HOST_WA', '192.168.0.68'),
+            'port' => env('DB_PORT_WA', '3306'),
+            'database' => env('DB_DATABASE_WA', 'wallneralt'),
+            'username' => env('DB_USERNAME_WA', 'wallneralt'),
+            'password' => env('DB_PASSWORD_WA', 'wallneralt'),
+            'unix_socket' => env('DB_SOCKET_WA', ''),
+            'charset' => env('DB_CHARSET_WA', 'utf8mb4'),
+            'collation' => env('DB_COLLATION_WA', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'wpdemo' => [
+            'driver' => 'mariadb',
+            'url' => env('DB_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'wpdemo'),
+            'username' => env('DB_USERNAME', 'wpdemo'),
+            'password' => env('DB_PASSWORD', 'wpdemo'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'fina' => [
+            'driver' => 'mariadb',
+            'url' => env('DB_URL'),
+            'host' => env('DB_HOST', '192.168.0.67'), // siberia
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_FINA_DATABASE', 'fina'),
+            'username' => env('DB_FINA_USERNAME', 'fina'),
+            'password' => env('DB_FINA_PASSWORD', 'fina'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
